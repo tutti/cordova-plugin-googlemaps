@@ -170,7 +170,7 @@ var MarkerCluster = function (map, markerClusterOptions, _exec) {
   map.on(event.CAMERA_MOVE_END, self._onCameraMoved.bind(self));
   window.addEventListener('orientationchange', self._onCameraMoved.bind(self));
 
-  self.on('cluster_click', self.onClusterClicked);
+  //self.on('cluster_click', self.onClusterClicked);
   self.on('nextTask', function () {
     self._isWorking = false;
     if (self._stopRequest || self._isRemoved ||
