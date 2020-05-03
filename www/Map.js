@@ -1469,7 +1469,7 @@ Map.prototype._onClusterEvent = function(eventName, markerClusterId, clusterId, 
       var marker = markerCluster.getMarkerById(clusterId);
       if (eventName === event.MARKER_CLICK) {
         markerCluster.trigger(eventName, position, marker);
-      } else {
+      } else if (marker) {
         if (eventName === event.INFO_OPEN) {
           marker.set('isInfoWindowVisible', true);
         }
