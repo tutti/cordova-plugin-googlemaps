@@ -1477,7 +1477,7 @@ Map.prototype._onClusterEvent = function(eventName, markerClusterId, clusterId, 
           marker.set('isInfoWindowVisible', false);
         }
       }
-      marker.trigger(eventName, position, marker);
+      if (marker) marker.trigger(eventName, position, marker);
     } else {
       // cluster marker
       var cluster = markerCluster._getClusterByClusterId(clusterId);
